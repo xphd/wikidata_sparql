@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "csvtojson": "^2.0.10",
+    "node-fetch": "^2.6.0",
+    "wikidata-search": "^1.0.3",
+    "wikidata-taxonomy": "^0.6.7"
   }
 }
