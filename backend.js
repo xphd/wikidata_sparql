@@ -103,8 +103,12 @@ function getEntities(ids, map, mapId) {
                     claims.forEach(claim => {
                         // console.log("cost"== claim.property)
                         if (claim.property == "cost") {
-                            console.log(claim.value)
-                            obj["cost"]=    claim.value 
+                            let raw_value = claim.value;
+                            // raw_value example: +25000000http://www.wikidata.org/entity/Q4917
+                            // [value,denomination]=resolveCurrency(raw_value)
+                            
+                            obj["cost"]=raw_value;
+                            // obj["denomination"]=denomination
                             console.log(obj)                  
                         }
                     })
@@ -121,3 +125,7 @@ function getEntities(ids, map, mapId) {
         })
     })
 }
+
+// function resolveCurrency(raw_value){
+//     let index = raw_value.
+// }
