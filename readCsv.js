@@ -4,7 +4,7 @@ const csvFilePath='imdb_10.csv'
 csv()
 .fromFile(csvFilePath)
 .then((jsonObj)=>{
-    console.log(jsonObj);
+    console.log(jsonObj[0]);
     /**
      * [
      * 	{a:"1", b:"2", c:"3"},

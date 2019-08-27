@@ -23,11 +23,14 @@
 //   console.log('body:', body); // Print the HTML for the Google homepage.
 // });
 
+var util = require('util');
+
 //First, create a new Wikidata Search object.
 var WikidataSearch = require('wikidata-search').WikidataSearch;
 var wikidataSearch = new WikidataSearch();
 
 //To search:
+let results = [];
 wikidataSearch.set('search', "The Godfather"); //set the search term
 wikidataSearch.search(function(result, error) {
 
@@ -35,9 +38,36 @@ wikidataSearch.search(function(result, error) {
     if (error){
         console.log(error)
     }else{
-        console.log(result)
+        // console.log(result.results)
+        results=result.results
+        // console.log(results.length)
+        // some function
+        //console.log(results[0].id)
+        let id = results[0].id
+        console.log(id)
+        wikidataSearch.getEntities([id],true,function(result, err) {
+            //Check for errors.
+            if (err) {
+                console.log('Uh oh, we got an error! : ' + err);
+                return;
+            }
+    
+            //Now let's look at the cool info we go back. Pretty cool, and pretty quick!
+            // console.log(util.inspect(result, true, null));
+            // console.log(result.entities[0].claims.length)
+            let claims = result.entities[0].claims
+            claims.forEach(claim=>{
+                // console.log("cost"== claim.property)
+            if (claim.property=="cost"){
+                console.log(claim.value)
+            }
+
+            })
+        })
     }
-});
+    
+})
+
 
 
 //To get detailed info on one or more entities:
