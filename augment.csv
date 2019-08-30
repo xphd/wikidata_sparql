@@ -1,0 +1,6 @@
+star_rating,title,content_rating,genre,duration,actors_list,id,label,cost
+9.3,The Shawshank Redemption,R,Crime,142,"[u'Tim Robbins', u'Morgan Freeman', u'Bob Gunton']",Q172241,The Shawshank Redemption,+25000000http://www.wikidata.org/entity/Q4917
+9.2,The Godfather,R,Crime,175,"[u'Marlon Brando', u'Al Pacino', u'James Caan']",Q47703,The Godfather,+6000000http://www.wikidata.org/entity/Q4917
+9.1,The Godfather: Part II,R,Crime,200,"[u'Al Pacino', u'Robert De Niro', u'Robert Duvall']",Q202326,The Godfather Part III,+54000000http://www.wikidata.org/entity/Q4917
+9,The Dark Knight,PG-13,Action,152,"[u'Christian Bale', u'Heath Ledger', u'Aaron Eckhart']",Q2695156,Batman,
+8.9,Pulp Fiction,R,Crime,154,"[u'John Travolta', u'Uma Thurman', u'Samuel L. Jackson']",Q104123,Pulp Fiction,+8000000http://www.wikidata.org/entity/Q4917
