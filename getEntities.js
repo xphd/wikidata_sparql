@@ -1,4 +1,5 @@
 
+
 function getEntities(ids, map_name_to_object, map_id_to_entity) {
     wikidataSearch.getEntities(ids, true, function (response, err) {
         //Check for errors.

@@ -5,6 +5,13 @@ const getIds = require("./getIds.js")
 
 let col_selected = "title"
 
+// for filter
+/**
+ * property: "instance of"
+ * value: "film"
+ * 
+ */
+
 let map_name_to_object = new Map(); // map name shown in colum to object returned by "wikidata serach"
 let map_id_to_entity = new Map(); // map id (begin with "Q") to entity (item wikidata)
 let col_names = [];
